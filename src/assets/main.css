@@ -1,0 +1,15 @@
+@import './base.css';
+
+
+body {
+  display: flex;
+  place-items: left;
+}
+
+#app {
+  height: 100px;
+  display: grid;
+  grid-template-areas: "a a";
+  grid-gap: 40px;
+  grid-auto-columns: 240px;
+}
