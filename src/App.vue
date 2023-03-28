@@ -1,10 +1,10 @@
 <script setup lang="ts">
 // import TheWelcome from './components/globeView.vue'
-import basicThree3dEnv from './components/basic3dEnv.vue';
+import home from './components/easy-rtc/welcome.vue';
 </script>
 
 <template>
-  <basicThree3dEnv />
+  <home />
 </template>
 
 <style scoped></style>

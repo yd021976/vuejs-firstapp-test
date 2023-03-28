@@ -12,6 +12,15 @@
 	],
 	"features": {
 		"ghcr.io/guiyomh/features/vim:0": {}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"Vue.volar",
+				"Gruntfuggly.todo-tree",
+				"donjayamanne.githistory"
+			]
+		}
 	}
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
