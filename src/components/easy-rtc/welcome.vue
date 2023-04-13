@@ -1,23 +1,22 @@
 <script setup lang="ts">
-import { reactive } from 'vue';
-import { io } from 'socket.io-client';
-const socket = io('http://localhost:3000').connect()
+import { inject, reactive } from 'vue';
+import type { Socket } from 'socket.io-client';
 
 const credentials = reactive({
     userid: "",
     password: ""
 })
+const websocket = inject<Socket>('websocket') as Socket // force Socket type even if 'inject' return undefined (crash of app in this case)
 
 /** IN : login messages */
-socket.on('login', (data) => {
+websocket.on('login', (data) => {
     let a = 0
 })
 
 /** OUT : login user */
 function connect() {
-    socket.emit('login', { 'email': credentials.userid, 'password': credentials.password })
+    websocket.emit('login', { 'email': credentials.userid, 'password': credentials.password })
 }
-
 </script>
 
 

@@ -5,12 +5,14 @@ import AppError from './AppError.vue';
 import './assets/main.css'
 
 const socket = io('http://localhost:3000')
-socket.on('error', (data) => {
+socket.on('connect_error', (data) => {
     createApp(AppError).mount('#app')
 })
 
-socket.on('connected', (data) => {
-    createApp(App).mount('#app')
+socket.on('connect', () => {
+    const app = createApp(App)
+    app.provide('websocket', socket)
+    app.mount('#app')
 })
 
 socket.connect()

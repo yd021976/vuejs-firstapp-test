@@ -18,7 +18,8 @@
 			"extensions": [
 				"Vue.volar",
 				"Gruntfuggly.todo-tree",
-				"donjayamanne.githistory"
+				"donjayamanne.githistory",
+				"Vue.vscode-typescript-vue-plugin"
 			]
 		}
 	}
